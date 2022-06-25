@@ -63,6 +63,7 @@ npm run build
 In this app we are using the folowing techonolgies:
 
 - [React](https://reactjs.org/). It's the library I feel most comfortable with, as I have previous experience working with it.
+- [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview) to manage the routing of the application and to allow the navigation typical of a SPA.
 - [Typescript](https://www.typescriptlang.org/).
 - [Webpack](https://webpack.js.org/) configured to use Scss.
 - We have used scss because it facilitates the work of developing styles, allowing us to structure the selectors in a more orderly and easy to follow way, in addition to providing many more functionalities.
