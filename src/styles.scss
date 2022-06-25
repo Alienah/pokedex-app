@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+}
+
+.my-text {
+  color: rgb(255, 157, 0);
+  padding: 2rem;
+
+  &:hover {
+    color: red;
+  }
+
+  background: url('./assets/clayton-malquist.jpg') no-repeat center;
+}
+
+img {
+  width: 200px;
+}
