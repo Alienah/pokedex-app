@@ -21,3 +21,4 @@ In this app we are using the folowing techonolgies:
 - [Webpack](https://webpack.js.org/) configured to use Scss.
 - [React testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing react components
 - [Jest](https://jestjs.io/) for basic testing and [jest-dom](https://github.com/testing-library/jest-dom) for a more declarative and clear asserts.
+- [Graphql](https://graphql.org/) API query language and [Apollo Client](https://www.apollographql.com/docs/react/) for the API frontend management.
