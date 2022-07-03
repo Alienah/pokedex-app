@@ -18,7 +18,7 @@ export interface PokemonQuery {
   pokemons: PokemonConnection;
 }
 
-interface PokemonFilterInput {
+export interface PokemonFilterInput {
   type?: string;
   isFavorite?: boolean;
 }

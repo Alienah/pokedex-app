@@ -11,6 +11,7 @@ export const pokemonsQuery = gql`
         name
         types
         image
+        isFavorite
       }
     }
   }
