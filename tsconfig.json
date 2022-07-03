@@ -19,7 +19,8 @@
       "layouts": ["layouts"],
       "pods": ["pods"],
       "scenes": ["scenes"],
-      "common-app": ["common-app"]
+      "common-app": ["common-app"],
+      "global-styles": ["global-styles"]
     }
   },
   "include": ["./src/**/*"]

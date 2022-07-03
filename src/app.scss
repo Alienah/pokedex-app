@@ -1,0 +1,16 @@
+@import './global-styles/styles.scss';
+
+.my-text {
+  color: $primaryColor;
+  padding: 1rem;
+
+  &:hover {
+    color: $secondaryColor;
+  }
+
+  background-color: $darkBlueColor;
+}
+
+img {
+  width: 200px;
+}

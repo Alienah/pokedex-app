@@ -1,13 +1,13 @@
 import React from 'react';
 import { RouterComponent } from 'core';
 
-import './styles.scss';
+import './global-styles/styles.scss';
+import './app.scss';
 
-export const App = ({ name = '' }) => {
+export const App = () => {
   return (
     <div className="app">
       <h1 className="my-text">Hello React !!</h1>
-      {name && <div className="welcome">Welcome {name}</div>}
       <RouterComponent />
     </div>
   );

@@ -14,6 +14,7 @@ module.exports = merge(
         pods: helpers.resolveFromRootPath('src/pods'),
         scenes: helpers.resolveFromRootPath('src/scenes'),
         'common-app': helpers.resolveFromRootPath('src/common-app'),
+        'global-styles': helpers.resolveFromRootPath('src/global-styles'),
       },
       extensions: ['.js', '.ts', '.tsx'],
     },

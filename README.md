@@ -66,7 +66,7 @@ In this app we are using the folowing techonolgies:
 - [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview) to manage the routing of the application and to allow the navigation typical of a SPA.
 - [Typescript](https://www.typescriptlang.org/).
 - [Webpack](https://webpack.js.org/) configured to use Scss.
-- We have used scss because it facilitates the work of developing styles, allowing us to structure the selectors in a more orderly and easy to follow way, in addition to providing many more functionalities.
+- We have used scss because it allows us to develop the styles in a simple way and I think that for this project it is enough. It lets us structure the selectors in a more orderly and easy-to-follow way, as well as providing many more functionalities.
 - [React testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing react components.
 - [Jest](https://jestjs.io/) for basic testing and [jest-dom](https://github.com/testing-library/jest-dom) for a more declarative and clear asserts.
 - [Graphql](https://graphql.org/) API query language and [Apollo Client](https://www.apollographql.com/docs/react/) for the API frontend management.

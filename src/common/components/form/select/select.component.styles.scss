@@ -1,0 +1,18 @@
+@import '~global-styles/styles.scss';
+
+.SelectComponent {
+  .select-input {
+    .MuiSelect-select:focus {
+      background-color: inherit;
+    }
+  }
+  .clear-button {
+    margin-right: $size5;
+    &:hover {
+      background-color: inherit;
+      svg {
+        fill: $primaryColor;
+      }
+    }
+  }
+}
