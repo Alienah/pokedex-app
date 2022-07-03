@@ -10,10 +10,14 @@ export const HomePage: React.FC = () => {
     navigate(routes.details('pokemonA'));
   };
   return (
-    <>
+    <div>
       <h2>Hello from Home page</h2>
-      <button onClick={handleNavigation}>Detail</button>
+      <div>
+        <button onClick={handleNavigation} type="button">
+          Detail
+        </button>
+      </div>
       <PokemonListContainer />
-    </>
+    </div>
   );
 };

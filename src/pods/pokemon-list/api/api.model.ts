@@ -1,7 +1,10 @@
 export interface Pokemon {
-  id: number;
+  id: string;
   name: string;
   types: string[];
+  image: string;
+  isFavorite: boolean;
+  number: number;
 }
 
 export interface PokemonConnection {
@@ -26,3 +29,5 @@ export interface PokemonsQueryInput {
   search?: string;
   filter?: PokemonFilterInput;
 }
+
+export type PokemonTypes = string[];

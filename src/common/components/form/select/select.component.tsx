@@ -12,13 +12,14 @@ import {
 import './select.component.styles.scss';
 
 interface Props {
+  'data-testid'?: string;
   label: string;
   onChange: (value: string) => void;
   options: string[];
 }
 
 export const SelectComponent: React.FC<Props> = (props) => {
-  const { label, onChange, options } = props;
+  const { label, onChange, options, 'data-testid': dataTestId } = props;
   const [selectedValue, setSelectedValue] = React.useState('');
 
   const handleClearClick = (): void => {
@@ -34,6 +35,7 @@ export const SelectComponent: React.FC<Props> = (props) => {
 
   return (
     <FormControl
+      data-testid={dataTestId}
       variant="standard"
       sx={{ m: 1, minWidth: 120 }}
       className="SelectComponent"

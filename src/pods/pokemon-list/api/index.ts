@@ -1,3 +1,3 @@
 export * from './api';
 export * from './api.model';
-export * from './api.hook';
+export * from './api.hooks';

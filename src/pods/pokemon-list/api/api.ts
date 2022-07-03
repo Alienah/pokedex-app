@@ -10,7 +10,14 @@ export const pokemonsQuery = gql`
         id
         name
         types
+        image
       }
     }
+  }
+`;
+
+export const pokemonTypesQuery = gql`
+  query pokemonTypesQuery {
+    pokemonTypes
   }
 `;

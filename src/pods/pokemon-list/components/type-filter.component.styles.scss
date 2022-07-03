@@ -1,0 +1,11 @@
+@import '~global-styles/styles.scss';
+
+.type-filter-skeleton,
+.type-filter-error {
+  margin: $size4 $size2;
+}
+
+.type-filter-error {
+  width: 120px;
+  height: 32px;
+}
