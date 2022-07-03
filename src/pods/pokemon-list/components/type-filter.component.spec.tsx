@@ -37,6 +37,8 @@ describe('TypeFilterComponent specs', () => {
   });
 
   it('should display an error message when an error is given', () => {
+    const originalWarn = console.warn;
+    console.warn = jest.fn();
     const props = {
       error: { message: 'This is an error' } as ApolloError,
       loading: false,
@@ -50,5 +52,8 @@ describe('TypeFilterComponent specs', () => {
 
     expect(selectComponent).toBeNull();
     expect(errorElement).toBeInTheDocument();
+    expect(console.warn).toBeCalledWith('Error! This is an error');
+
+    console.warn = originalWarn;
   });
 });
