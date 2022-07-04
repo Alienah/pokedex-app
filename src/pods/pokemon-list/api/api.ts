@@ -1,5 +1,7 @@
 import { gql } from '@apollo/client';
 
+export const POKEMONS_QUERY = 'pokemonsQuery';
+
 export const pokemonsQuery = gql`
   query pokemonsQuery($pokemonsQueryInput: PokemonsQueryInput!) {
     pokemons(query: $pokemonsQueryInput) {

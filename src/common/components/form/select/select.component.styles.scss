@@ -8,6 +8,7 @@
   }
   .clear-button {
     margin-right: $size5;
+    padding: 0 $size1;
     &:hover {
       background-color: inherit;
       svg {

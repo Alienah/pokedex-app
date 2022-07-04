@@ -1,6 +1,7 @@
 import React from 'react';
 import { Pokemon } from './pokemon-list.vm';
 import { ApolloError } from '@apollo/client';
+import { FavoriteInputContainer } from 'pods/favorite-input';
 
 interface Props {
   loading: boolean;
@@ -32,6 +33,10 @@ export const PokemonListComponent: React.FC<Props> = (props) => {
                     ))}
                   </ul>
                 )}
+                <FavoriteInputContainer
+                  isFavorite={pokemon.isFavorite}
+                  pokemonId={pokemon.id}
+                />
               </div>
             </li>
           ))}
