@@ -2,6 +2,8 @@ import React from 'react';
 import { Pokemon } from './pokemon-list.vm';
 import { ApolloError } from '@apollo/client';
 import { FavoriteInputContainer } from 'pods/favorite-input';
+import { Link } from 'react-router-dom';
+import { routes } from 'core';
 
 interface Props {
   loading: boolean;
@@ -24,7 +26,7 @@ export const PokemonListComponent: React.FC<Props> = (props) => {
           pokemons.map((pokemon) => (
             <li key={pokemon.id}>
               <div style={{ height: '150px' }}>
-                <p>{pokemon.name}</p>
+                <Link to={routes.details(pokemon.name)}>{pokemon.name}</Link>
                 <p>{pokemon.id}</p>
                 {pokemon.types.length > 0 && (
                   <ul>
