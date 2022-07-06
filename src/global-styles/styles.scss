@@ -1,3 +1,4 @@
+@import './scss/mixins';
 @import './scss/typography';
 @import './scss/variables';
 
@@ -5,4 +6,8 @@
   margin: 0;
   color: $fontColor;
   @include robotoRegular;
+}
+
+body {
+  font-size: $body-font-size;
 }

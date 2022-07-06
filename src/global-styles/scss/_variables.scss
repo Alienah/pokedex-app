@@ -9,6 +9,7 @@ $redColor: #e51818;
 
 $inverseColor: #fff;
 $grayLightColor: #f5f5f5;
+$grayMediumColor: #ececec;
 $fontColor: #363636;
 $visitedColor: #6598b8;
 
@@ -25,11 +26,22 @@ $size7: 32px;
 $headerHeight: 64px;
 $footerHeight: 60px;
 
+// Font
+
+$heading-3-font: 24px;
+$heading-4-font: 20px;
+$label-font-size: 18px;
+$body-font-size: 16px;
+
 // Breakpoints
 
-$break1: 769px;
-$break2: 1200px;
+$break1: 600px;
+$break2: 769px;
+$break3: 900px;
+$break4: 1180px;
+$break5: 1200px;
 
 //Shadows
-$boxShadowLight: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-$boxShadowMedium: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+$boxShadowLight: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+$boxShadowMedium: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+$boxShadowStrong: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);

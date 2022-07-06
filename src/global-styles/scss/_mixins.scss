@@ -1,0 +1,9 @@
+@mixin label-font-m {
+  font-size: $label-font-size;
+  text-transform: uppercase;
+}
+
+@mixin label-font-s {
+  font-size: $body-font-size;
+  text-transform: uppercase;
+}

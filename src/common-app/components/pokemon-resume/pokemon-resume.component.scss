@@ -1,0 +1,39 @@
+@import '~global-styles/styles.scss';
+
+.PokemonResumeComponent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $size1 0;
+
+  .title {
+    font-size: $label-font-size;
+    @include robotoBold;
+  }
+
+  .types {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    .type {
+      font-size: $body-font-size;
+    }
+
+    & li:not(:last-child):after {
+      content: ', ';
+      white-space: pre;
+    }
+  }
+
+  &.size-m {
+    .title {
+      font-size: $heading-3-font;
+    }
+
+    .type {
+      font-size: $label-font-size;
+    }
+  }
+}
