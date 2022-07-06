@@ -8,8 +8,19 @@ import './pokemon-card.component.scss';
 
 export type CardType = 'medium' | 'short';
 
+export type PokemonForCard = Omit<
+  Pokemon,
+  | 'weight'
+  | 'height'
+  | 'maxCP'
+  | 'maxHP'
+  | 'evolutions'
+  | 'previousEvolutions'
+  | 'sound'
+>;
+
 export interface PokemonCardComponentProps {
-  pokemon: Pokemon;
+  pokemon: PokemonForCard;
   type?: CardType;
   noLink?: boolean;
 }

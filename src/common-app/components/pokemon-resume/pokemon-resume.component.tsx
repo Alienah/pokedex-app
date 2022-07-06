@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
-import { Pokemon } from 'pods/pokemon-detail/pokemon-detail.vm';
 import { FavoriteInputContainer } from 'pods/favorite-input';
 import { PokemonTypes } from 'pods/pokemon-list/api';
+import { PokemonForCard } from '../pokemon-card';
 
 import './pokemon-resume.component.scss';
 
@@ -9,7 +9,7 @@ type ContentSize = 's' | 'm';
 
 export interface PokemonResumeComponentProps {
   className?: string;
-  pokemon: Pokemon;
+  pokemon: PokemonForCard;
   size?: ContentSize;
   showTypes?: boolean;
 }

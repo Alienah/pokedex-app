@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { SyntheticEvent } from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import IconButton from '@mui/material/IconButton';
@@ -15,7 +15,8 @@ export const FavoriteInputComponent: React.FC<Props> = (props) => {
   const [isFavorite, setIsFavorite] =
     React.useState<boolean>(initialIsfavorite);
 
-  const handleFavorite = () => {
+  const handleFavorite = (e: SyntheticEvent): void => {
+    e.stopPropagation();
     setIsFavorite(!isFavorite);
     onChange(!isFavorite);
   };

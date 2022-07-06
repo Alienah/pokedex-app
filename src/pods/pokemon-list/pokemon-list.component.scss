@@ -1,0 +1,53 @@
+@import '~global-styles/styles.scss';
+
+.PokemonListComponent {
+  text-align: center;
+
+  .pokemon-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: $size5;
+    display: grid;
+
+    &.grid-view {
+      grid-template-columns: auto;
+
+      @media screen and (min-width: $break1) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media screen and (min-width: $break2) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media screen and (min-width: $break3) {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      @media screen and (min-width: $break4) {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+  }
+
+  .load-more__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: $size7;
+
+    & > span {
+      color: $grayStrongColor;
+    }
+
+    .load-button {
+      background-color: $primaryColor;
+      margin-right: $size2;
+
+      &:hover {
+        background-color: $darkBlueColor;
+      }
+    }
+  }
+}

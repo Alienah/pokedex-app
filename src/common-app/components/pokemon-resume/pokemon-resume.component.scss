@@ -6,6 +6,10 @@
   align-items: center;
   padding: $size1 0;
 
+  .pokemon-main-info {
+    text-align: left;
+  }
+
   .title {
     font-size: $label-font-size;
     @include robotoBold;
@@ -29,7 +33,7 @@
 
   &.size-m {
     .title {
-      font-size: $heading-3-font;
+      font-size: $heading-4-font;
     }
 
     .type {
