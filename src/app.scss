@@ -1,16 +1,13 @@
 @import './global-styles/styles.scss';
 
-.my-text {
-  color: $primaryColor;
+.header {
+  color: $whiteColor;
   padding: 1rem;
-
-  &:hover {
-    color: $secondaryColor;
-  }
-
   background-color: $darkBlueColor;
 }
 
-img {
-  width: 200px;
+.page {
+  padding: $size4;
+  max-width: 1200px;
+  margin: 0 auto;
 }

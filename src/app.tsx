@@ -7,7 +7,7 @@ import './app.scss';
 export const App = () => {
   return (
     <div className="app">
-      <h1 className="my-text">Hello React !!</h1>
+      <h1 className="header">Pokedex</h1>
       <RouterComponent />
     </div>
   );

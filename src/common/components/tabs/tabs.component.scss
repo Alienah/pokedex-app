@@ -1,0 +1,14 @@
+@import '~global-styles/styles.scss';
+
+.TabsComponent {
+  .tab-label {
+    &[aria-selected='true'] {
+      color: $primaryColor;
+      @include robotoBold;
+    }
+  }
+
+  .MuiTabs-indicator {
+    background-color: $primaryColor;
+  }
+}

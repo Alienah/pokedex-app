@@ -2,6 +2,8 @@ import React, { ReactNode, SyntheticEvent } from 'react';
 import { Box, Tabs, Tab } from '@mui/material';
 import { TabPanel } from './tab-panel.component';
 
+import './tabs.component.scss';
+
 interface A11yProps {
   id: string;
   'aria-controls': string;
@@ -30,6 +32,8 @@ export const TabsComponent: React.FC<TabsProps> = (props) => {
   const { 'data-testid': dataTestId, header, options, onChange } = props;
   const [value, setValue] = React.useState(0);
 
+  const isTablet = window.matchMedia('(max-width: 768px)').matches;
+
   const handleChange = (
     e: SyntheticEvent<Element, Event>,
     newValue: number
@@ -41,12 +45,27 @@ export const TabsComponent: React.FC<TabsProps> = (props) => {
   };
 
   return (
-    <Box sx={{ width: '100%' }} data-testid={dataTestId}>
+    <Box
+      className="TabsComponent"
+      sx={{ width: '100%' }}
+      data-testid={dataTestId}
+    >
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="tabs">
+        <Tabs
+          className="tabs__container"
+          value={value}
+          onChange={handleChange}
+          aria-label="tabs"
+          variant={isTablet ? 'fullWidth' : 'standard'}
+        >
           {options?.length > 0 &&
             options.map((option, index) => (
-              <Tab key={index} label={option.label} {...a11yProps(index)} />
+              <Tab
+                className="tab-label"
+                key={index}
+                label={option.label}
+                {...a11yProps(index)}
+              />
             ))}
         </Tabs>
       </Box>
