@@ -1,0 +1,39 @@
+@import '~global-styles/styles.scss';
+
+.PokemonCardComponent {
+  box-shadow: $boxShadowLight;
+  text-align: center;
+  max-width: 600px;
+  height: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+  & .card-item {
+    padding: $size3;
+  }
+
+  .link {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .card-pokemon-image {
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .card-pokemon-resume {
+    // background-color: $grayLightColor;
+    background-color: $tertiaryColor;
+  }
+}
