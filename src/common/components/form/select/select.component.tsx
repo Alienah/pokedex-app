@@ -9,7 +9,7 @@ import {
   SelectChangeEvent,
 } from '@mui/material';
 
-import './select.component.styles.scss';
+import './select.component.scss';
 
 interface Props {
   'data-testid'?: string;
@@ -40,7 +40,9 @@ export const SelectComponent: React.FC<Props> = (props) => {
       sx={{ m: 1, minWidth: 120 }}
       className="SelectComponent"
     >
-      <InputLabel id="select-standard-label">{label}</InputLabel>
+      <InputLabel className="select-label" id="select-standard-label">
+        {label}
+      </InputLabel>
       <Select
         className="select-input"
         labelId="select-standard-label"

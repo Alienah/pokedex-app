@@ -2,7 +2,8 @@
 
 .type-filter-skeleton,
 .type-filter-error {
-  margin: $size4 $size2;
+  margin: $size2;
+  align-self: flex-end;
 }
 
 .type-filter-error {

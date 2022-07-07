@@ -1,14 +1,17 @@
 import React, { ChangeEvent } from 'react';
 import { TextField } from '@mui/material';
 
+import './text-field.component.scss';
+
 interface Props {
   'data-testid'?: string;
   label: string;
   onChange: (value: string) => void;
+  className?: string;
 }
 
 export const TextFieldComponent: React.FC<Props> = (props) => {
-  const { label, onChange, 'data-testid': dataTestId } = props;
+  const { label, onChange, 'data-testid': dataTestId, className } = props;
   const [textValue, setTextValue] = React.useState('');
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
@@ -19,6 +22,7 @@ export const TextFieldComponent: React.FC<Props> = (props) => {
 
   return (
     <TextField
+      className={`TextFieldComponent ${className || ''}`.trim()}
       data-testid={dataTestId}
       id="standard-textfield"
       label={label || ''}

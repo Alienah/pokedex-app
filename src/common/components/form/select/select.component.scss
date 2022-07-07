@@ -1,6 +1,16 @@
 @import '~global-styles/styles.scss';
 
 .SelectComponent {
+  .Mui-focused.select-label {
+    color: $primaryColor;
+
+    & + .MuiInput-root::before {
+      border-bottom-color: $primaryColor;
+    }
+    & + .MuiInput-root::after {
+      border-bottom-color: $primaryColor;
+    }
+  }
   .select-input {
     .MuiSelect-select:focus {
       background-color: inherit;

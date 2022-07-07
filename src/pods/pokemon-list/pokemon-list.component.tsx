@@ -19,7 +19,7 @@ interface Props {
 
 export const PokemonListComponent: React.FC<Props> = (props) => {
   const { error, loading, gridType, pokemons, totalCount, fetchMore } = props;
-  if (loading) return <div>'Loading...'</div>;
+  if (loading) return <div className="PokemonListComponent">'Loading...'</div>;
   if (error) return <div>`Error! ${error.message}`</div>;
 
   return (

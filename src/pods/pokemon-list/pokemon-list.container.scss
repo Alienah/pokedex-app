@@ -1,0 +1,17 @@
+@import '~global-styles/styles.scss';
+
+.tab-content-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  .search-field {
+    flex: 1;
+  }
+
+  .SelectComponent {
+    @media screen and (min-width: $break2) {
+      min-width: 200px;
+    }
+  }
+}

@@ -5,8 +5,15 @@ import {
   usePokemonTypesQuery,
 } from './api';
 import { TextFieldComponent, TabsComponent, TabInfo } from 'common/components';
-import { TypeFilterComponent } from './components/type-filter.component';
+import { TypeFilterComponent } from './components/type-filter';
 import { PokemonListComponent } from './pokemon-list.component';
+import {
+  GridSwitchComponent,
+  GridType,
+  GRID_TYPES,
+} from './components/grid-switch';
+
+import './pokemon-list.container.scss';
 
 interface QueryFilters {
   filter: PokemonFilterInput;
@@ -23,6 +30,7 @@ const FAV = 'FAVORITES';
 export const PokemonListContainer: React.FC = () => {
   const [queryFilters, setQueryFilters] =
     React.useState<QueryFilters>(defaultQueryFilters);
+  const [gridType, setGridType] = React.useState<GridType>(GRID_TYPES.grid);
   const { pokemons, loading, error, fetchMore, totalCount, refetch } =
     usePokemonsQuery();
   const {
@@ -63,6 +71,7 @@ export const PokemonListContainer: React.FC = () => {
       <PokemonListComponent
         loading={loading}
         error={error}
+        gridType={gridType}
         pokemons={pokemons}
         totalCount={totalCount}
         fetchMore={fetchMore}
@@ -81,15 +90,20 @@ export const PokemonListContainer: React.FC = () => {
   };
 
   const tabContentHeader = (
-    <>
-      <TextFieldComponent label="Search" onChange={onSearch} />
+    <div className="tab-content-header">
+      <TextFieldComponent
+        className="search-field"
+        label="Search"
+        onChange={onSearch}
+      />
       <TypeFilterComponent
         onFilterByType={onFilterByType}
         types={pokemonTypes}
         loading={loadingTypes}
         error={errorInTypesQuery}
       />
-    </>
+      <GridSwitchComponent onChange={setGridType} />
+    </div>
   );
 
   return (

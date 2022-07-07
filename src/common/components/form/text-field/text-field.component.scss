@@ -1,0 +1,14 @@
+@import '~global-styles/styles.scss';
+
+.TextFieldComponent {
+  .Mui-focused.MuiInputLabel-root {
+    color: $primaryColor;
+
+    & + .MuiInput-root::before {
+      border-bottom-color: $primaryColor;
+    }
+    & + .MuiInput-root::after {
+      border-bottom-color: $primaryColor;
+    }
+  }
+}
