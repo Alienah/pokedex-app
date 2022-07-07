@@ -82,6 +82,7 @@ In this app we are using the folowing techonolgies:
 
 Future improvements for the project could be the following:
 
+- Use Github Actions to create a pipeline that performs the steps we want, like testing or deploy.
 - Adding context to not lose the scroll position or previous search when moving between the list and the Pokemon detail.
 - We would have to add more tests
 - Add i18n to support more languages
