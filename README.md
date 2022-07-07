@@ -20,9 +20,15 @@ We are using node version 14.16.0 in this project.
 
 ## Get started
 
+### Clone the repository
+
+```bash
+git clone git@github.com:Alienah/pokedex-app.git
+```
+
 ### Install
 
-Install the dependencies by running:
+Move into the new folder and install the dependencies by running:
 
 ```bash
 npm install
@@ -70,3 +76,13 @@ In this app we are using the folowing techonolgies:
 - [React testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing react components.
 - [Jest](https://jestjs.io/) for basic testing and [jest-dom](https://github.com/testing-library/jest-dom) for a more declarative and clear asserts.
 - [Graphql](https://graphql.org/) API query language and [Apollo Client](https://www.apollographql.com/docs/react/) for the API frontend management.
+- [Material UI Components](https://mui.com/material-ui/getting-started/overview/) for basic components. However, some of them we have used them inside a wrapper component created by us, so that, in case of changing the library, we only have to change in one place.
+
+## Next steps
+
+Future improvements for the project could be the following:
+
+- Adding context to not lose the scroll position or previous search when moving between the list and the Pokemon detail.
+- We would have to add more tests
+- Add i18n to support more languages
+- Move all components that do not have a wrapper component in our project to the common components folder, for better maintainability.
