@@ -1,6 +1,8 @@
 @import '~global-styles/styles.scss';
 
 .PokemonCardComponent {
+  $cardPadding: $size3;
+
   box-shadow: $boxShadowLight;
   text-align: center;
   max-width: 600px;
@@ -9,10 +11,6 @@
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-
-  & .card-item {
-    padding: $size3;
-  }
 
   .link {
     display: flex;
@@ -24,6 +22,7 @@
     max-height: 200px;
     display: flex;
     align-items: center;
+    padding: $cardPadding;
 
     img {
       max-height: 100%;
@@ -33,7 +32,11 @@
   }
 
   .card-pokemon-resume {
-    // background-color: $grayLightColor;
     background-color: $tertiaryColor;
+    padding: $cardPadding 0;
+
+    .pokemon-main-info {
+      padding-left: $cardPadding;
+    }
   }
 }

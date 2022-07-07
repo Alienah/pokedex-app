@@ -20,6 +20,8 @@ export const pokemonByNameQuery = gql`
       evolutions {
         id
         name
+        types
+        image
       }
       previousEvolutions {
         id
