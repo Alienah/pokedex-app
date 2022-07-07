@@ -2,6 +2,7 @@ import React from 'react';
 import { Pokemon } from './pokemon-list.vm';
 import { ApolloError } from '@apollo/client';
 import Button from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress';
 import { PokemonCardComponent } from 'common-app/components';
 import { GridType, GRID_TYPES } from './components/grid-switch';
 import { BoxItemComponent } from './components/box-item';
@@ -19,8 +20,14 @@ interface Props {
 
 export const PokemonListComponent: React.FC<Props> = (props) => {
   const { error, loading, gridType, pokemons, totalCount, fetchMore } = props;
-  if (loading) return <div className="PokemonListComponent">'Loading...'</div>;
-  if (error) return <div>`Error! ${error.message}`</div>;
+  if (loading)
+    return (
+      <div className="PokemonListComponent">
+        <CircularProgress color="inherit" />
+      </div>
+    );
+  if (error)
+    return <div className="PokemonListComponent">Error: {error.message}</div>;
 
   return (
     <div className={`PokemonListComponent ${gridType}`.trim()}>

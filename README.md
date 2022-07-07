@@ -31,7 +31,7 @@ git clone git@github.com:Alienah/pokedex-app.git
 Move into the new folder and install the dependencies by running:
 
 ```bash
-npm install
+npm ci
 ```
 
 ### Start the application
@@ -87,3 +87,4 @@ Future improvements for the project could be the following:
 - We would have to add more tests
 - Add i18n to support more languages
 - Move all components that do not have a wrapper component in our project to the common components folder, for better maintainability.
+- Create skeletons to use them when a component is loading

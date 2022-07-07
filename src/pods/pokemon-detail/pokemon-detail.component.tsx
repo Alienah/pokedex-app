@@ -6,9 +6,10 @@ import {
   PokemonResumeComponent,
 } from 'common-app/components';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+import CircularProgress from '@mui/material/CircularProgress';
+import { IconButton } from '@mui/material';
 
 import './pokemon-detail.component.scss';
-import { IconButton } from '@mui/material';
 
 interface Props {
   loading: boolean;
@@ -29,8 +30,14 @@ export const PokemonDetailComponent: React.FC<Props> = (props) => {
     pokemonSound.play();
   };
 
-  if (loading) return <div>'Loading...'</div>;
-  if (error) return <div>`Error! ${error.message}`</div>;
+  if (loading)
+    return (
+      <div className="PokemonDetailComponent">
+        <CircularProgress color="inherit" />
+      </div>
+    );
+  if (error)
+    return <div className="PokemonDetailComponent">Error ${error.message}</div>;
 
   return (
     <div className="PokemonDetailComponent">
